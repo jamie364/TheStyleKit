@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: #1a1a1a;
+            color: #2d3e4f;
             background: #f5f1e8;
         }
         
@@ -26,13 +26,12 @@
         
         /* Header */
         header {
-            background: rgba(245, 241, 232, 0.98);
+            background: rgba(255, 255, 255, 0.95);
             padding: 20px 0;
             position: sticky;
             top: 0;
             z-index: 100;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border-bottom: 1px solid rgba(139, 35, 50, 0.1);
         }
         
         .header-content {
@@ -44,33 +43,32 @@
         .logo {
             font-size: 24px;
             font-weight: 700;
-            color: #1a1a1a;
+            color: #4A5F7F;
         }
         
         .logo span {
-            color: #8B2332;
+            color: #8FA998;
         }
         
         .header-cta {
-            background: #8B2332;
-            color: #f5f1e8;
+            background: #8FA998;
+            color: white;
             padding: 12px 24px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s;
+            transition: opacity 0.3s;
         }
         
         .header-cta:hover {
-            background: #6d1b27;
-            transform: translateY(-1px);
+            opacity: 0.9;
         }
         
         /* Hero Section */
         .hero {
             padding: 80px 0;
             text-align: center;
-            background: linear-gradient(135deg, #f5f1e8 0%, #ede5d8 100%);
+            background: linear-gradient(135deg, #f5f1e8 0%, #e8dcc8 100%);
         }
         
         .hero h1 {
@@ -78,29 +76,18 @@
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 20px;
-            color: #1a1a1a;
+            color: #4A5F7F;
         }
         
         .hero h1 .highlight {
-            color: #8B2332;
+            color: #8FA998;
         }
         
         .hero h2 {
             font-size: 24px;
             font-weight: 400;
-            color: #1a1a1a;
-            margin-bottom: 20px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .hero-subheadline {
-            font-size: 20px;
-            font-weight: 600;
-            color: #8B2332;
+            color: #2d3e4f;
             margin-bottom: 40px;
-            line-height: 1.6;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
@@ -114,40 +101,39 @@
         }
         
         .btn-primary {
-            background: #8B2332;
-            color: #f5f1e8;
+            background: #8FA998;
+            color: white;
             padding: 18px 40px;
             border-radius: 12px;
             text-decoration: none;
             font-size: 18px;
             font-weight: 600;
             display: inline-block;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(139, 35, 50, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(143, 169, 152, 0.3);
         }
         
         .btn-primary:hover {
-            background: #6d1b27;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(139, 35, 50, 0.4);
+            box-shadow: 0 6px 20px rgba(143, 169, 152, 0.4);
         }
         
         .btn-secondary {
-            background: #f5f1e8;
-            color: #1a1a1a;
+            background: white;
+            color: #4A5F7F;
             padding: 18px 40px;
             border-radius: 12px;
             text-decoration: none;
             font-size: 18px;
             font-weight: 600;
             display: inline-block;
-            border: 2px solid #1a1a1a;
+            border: 2px solid #4A5F7F;
             transition: all 0.3s;
         }
         
         .btn-secondary:hover {
-            background: #1a1a1a;
-            color: #f5f1e8;
+            background: #4A5F7F;
+            color: white;
         }
         
         .trust-bar {
@@ -156,20 +142,18 @@
             gap: 40px;
             margin-top: 30px;
             font-size: 16px;
-            color: #1a1a1a;
-            flex-wrap: wrap;
+            color: #2d3e4f;
         }
         
         .trust-item {
             display: flex;
             align-items: center;
             gap: 8px;
-            font-weight: 600;
         }
         
         .social-proof {
             margin-top: 30px;
-            color: #8B2332;
+            color: #B08968;
             font-weight: 600;
         }
         
@@ -187,26 +171,13 @@
             font-size: 42px;
             font-weight: 700;
             margin-bottom: 16px;
-            color: #1a1a1a;
+            color: #4A5F7F;
         }
         
         .section-header p {
             font-size: 20px;
-            color: #1a1a1a;
+            color: #2d3e4f;
             opacity: 0.8;
-        }
-        
-        /* Callout Box */
-        .callout-box {
-            background: #8B2332;
-            color: #f5f1e8;
-            padding: 30px 40px;
-            border-radius: 16px;
-            text-align: center;
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 1.6;
-            box-shadow: 0 4px 15px rgba(139, 35, 50, 0.2);
         }
         
         /* Problem Section */
@@ -224,7 +195,7 @@
             padding: 40px;
             background: #f5f1e8;
             border-radius: 16px;
-            border: 2px solid rgba(139, 35, 50, 0.1);
+            border: 2px solid #d4e5d8;
         }
         
         .problem-card h3 {
@@ -235,12 +206,11 @@
         .problem-card h4 {
             font-size: 20px;
             margin-bottom: 16px;
-            color: #1a1a1a;
-            font-weight: 700;
+            color: #4A5F7F;
         }
         
         .problem-card p {
-            color: #1a1a1a;
+            color: #2d3e4f;
             line-height: 1.8;
         }
         
@@ -248,79 +218,13 @@
             text-align: center;
             font-size: 24px;
             font-weight: 600;
-            color: #8B2332;
+            color: #8FA998;
             margin-top: 60px;
-        }
-        
-        /* Comparison Section */
-        .comparison {
-            background: #1a1a1a;
-            color: #f5f1e8;
-        }
-        
-        .comparison .section-header h2 {
-            color: #f5f1e8;
-        }
-        
-        .comparison .section-header p {
-            color: #f5f1e8;
-        }
-        
-        .comparison-table {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #f5f1e8;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-        }
-        
-        .comparison-header {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            background: #2a2a2a;
-            color: #f5f1e8;
-        }
-        
-        .comparison-header div {
-            padding: 24px;
-            text-align: center;
-            font-size: 20px;
-            font-weight: 700;
-        }
-        
-        .comparison-header div:first-child {
-            border-right: 2px solid #1a1a1a;
-        }
-        
-        .comparison-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            border-bottom: 1px solid rgba(139, 35, 50, 0.1);
-        }
-        
-        .comparison-row:last-child {
-            border-bottom: none;
-        }
-        
-        .comparison-cell {
-            padding: 24px;
-            color: #1a1a1a;
-        }
-        
-        .comparison-cell:first-child {
-            border-right: 2px solid rgba(139, 35, 50, 0.1);
-            opacity: 0.7;
-        }
-        
-        .comparison-cell:last-child {
-            background: rgba(139, 35, 50, 0.05);
-            font-weight: 600;
         }
         
         /* Products Section */
         .products {
-            background: linear-gradient(135deg, #f5f1e8 0%, #ede5d8 100%);
+            background: linear-gradient(135deg, #f5f1e8 0%, #e8dcc8 100%);
         }
         
         .products-grid {
@@ -334,13 +238,13 @@
             background: white;
             padding: 40px;
             border-radius: 16px;
-            border: 2px solid rgba(139, 35, 50, 0.1);
-            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            border-top: 4px solid #8FA998;
         }
         
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(139, 35, 50, 0.15);
         }
         
         .product-icon {
@@ -350,37 +254,41 @@
         
         .product-card h3 {
             font-size: 24px;
-            margin-bottom: 16px;
-            color: #1a1a1a;
-        }
-        
-        .product-card p {
-            color: #1a1a1a;
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-        
-        .product-examples {
-            background: #f5f1e8;
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 20px;
-        }
-        
-        .product-examples h4 {
-            font-size: 16px;
             margin-bottom: 12px;
-            color: #8B2332;
+            color: #4A5F7F;
         }
         
-        .product-examples ul {
+        .product-card ul {
             list-style: none;
-            padding: 0;
+            margin-bottom: 20px;
         }
         
-        .product-examples li {
+        .product-card li {
             padding: 8px 0;
-            color: #1a1a1a;
+            color: #2d3e4f;
+        }
+        
+        .product-card li:before {
+            content: "• ";
+            color: #8FA998;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #B08968;
+        }
+        
+        .callout-box {
+            background: linear-gradient(135deg, #8FA998 0%, #7a9184 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
         }
         
         /* How It Works */
@@ -396,19 +304,18 @@
         
         .step {
             text-align: center;
-            padding: 30px;
         }
         
         .step-number {
             width: 60px;
             height: 60px;
-            background: #8B2332;
-            color: #f5f1e8;
+            background: #8FA998;
+            color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 700;
             margin: 0 auto 20px;
         }
@@ -416,17 +323,17 @@
         .step h3 {
             font-size: 20px;
             margin-bottom: 12px;
-            color: #1a1a1a;
+            color: #4A5F7F;
         }
         
         .step p {
-            color: #1a1a1a;
-            line-height: 1.6;
+            color: #2d3e4f;
+            opacity: 0.8;
         }
         
         /* Examples Section */
         .examples {
-            background: linear-gradient(135deg, #f5f1e8 0%, #ede5d8 100%);
+            background: #f5f1e8;
         }
         
         .examples-grid {
@@ -437,75 +344,70 @@
         
         .example-card {
             background: white;
-            padding: 30px;
             border-radius: 16px;
-            border: 2px solid rgba(139, 35, 50, 0.1);
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
         
         .example-header {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #f5f1e8;
+            background: #4A5F7F;
+            color: white;
+            padding: 30px;
+            text-align: center;
         }
         
         .example-header h3 {
             font-size: 20px;
-            color: #1a1a1a;
             margin-bottom: 8px;
         }
         
         .example-header p {
-            color: #1a1a1a;
-            opacity: 0.7;
+            opacity: 0.8;
             font-size: 14px;
         }
         
         .example-content {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+            padding: 30px;
+        }
+        
+        .example-products {
+            margin-bottom: 20px;
         }
         
         .example-products h4 {
             font-size: 16px;
             margin-bottom: 12px;
-            color: #8B2332;
+            color: #4A5F7F;
         }
         
         .example-products ul {
             list-style: none;
-            padding: 0;
+            font-size: 14px;
         }
         
         .example-products li {
             padding: 6px 0;
-            color: #1a1a1a;
+            color: #2d3e4f;
         }
         
         .example-result {
             background: #f5f1e8;
             padding: 20px;
-            border-radius: 12px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #8FA998;
         }
         
         .example-result strong {
-            display: block;
-            font-size: 20px;
-            color: #8B2332;
-            margin-bottom: 8px;
+            color: #8FA998;
+            font-size: 18px;
         }
         
         .example-quote {
             font-style: italic;
-            color: #1a1a1a;
-            margin-top: 8px;
-        }
-        
-        .example-detail {
+            margin-top: 10px;
             font-size: 14px;
-            color: #1a1a1a;
-            opacity: 0.8;
-            margin-top: 8px;
+            color: #2d3e4f;
         }
         
         /* Pricing Section */
@@ -513,115 +415,116 @@
             background: white;
         }
         
-        .pricing-intro {
-            text-align: center;
-            font-size: 22px;
-            color: #8B2332;
-            font-weight: 600;
-            margin-bottom: 50px;
-            line-height: 1.6;
-        }
-        
         .pricing-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
-            max-width: 500px;
-            margin: 0 auto;
         }
         
         .pricing-card {
             background: #f5f1e8;
-            padding: 50px;
+            padding: 40px;
             border-radius: 16px;
-            border: 3px solid #8B2332;
-            text-align: center;
+            position: relative;
+            border: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .pricing-card.popular {
+            border-color: #8FA998;
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(143, 169, 152, 0.2);
+        }
+        
+        .popular-badge {
+            background: #8FA998;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-weight: 600;
         }
         
         .pricing-card h3 {
-            font-size: 32px;
-            margin-bottom: 12px;
-            color: #1a1a1a;
-        }
-        
-        .pricing-card > p {
-            color: #1a1a1a;
-            opacity: 0.8;
-            margin-bottom: 30px;
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: #4A5F7F;
         }
         
         .price-amount {
-            font-size: 56px;
+            font-size: 48px;
             font-weight: 700;
-            color: #8B2332;
-            margin-bottom: 30px;
+            color: #8FA998;
+            margin: 20px 0;
         }
         
         .price-amount span {
-            font-size: 24px;
-            opacity: 0.7;
+            font-size: 18px;
+            color: #2d3e4f;
         }
         
         .pricing-features {
             list-style: none;
-            padding: 0;
-            margin-bottom: 30px;
-            text-align: left;
+            margin: 30px 0;
         }
         
         .pricing-features li {
             padding: 12px 0;
-            color: #1a1a1a;
-            border-bottom: 1px solid rgba(139, 35, 50, 0.1);
-        }
-        
-        .pricing-features li:last-child {
-            border-bottom: none;
+            color: #2d3e4f;
         }
         
         .pricing-features li:before {
             content: "✓ ";
-            color: #8B2332;
-            font-weight: 700;
+            color: #8FA998;
+            font-weight: bold;
             margin-right: 8px;
         }
         
         .pricing-cta {
-            background: #8B2332;
-            color: #f5f1e8;
-            padding: 18px 40px;
-            border-radius: 12px;
+            display: block;
+            text-align: center;
+            padding: 16px;
+            background: #8FA998;
+            color: white;
+            border-radius: 8px;
             text-decoration: none;
-            font-size: 18px;
             font-weight: 600;
-            display: inline-block;
-            transition: all 0.3s;
+            transition: opacity 0.3s;
         }
         
         .pricing-cta:hover {
-            background: #6d1b27;
-            transform: translateY(-2px);
+            opacity: 0.9;
         }
         
         /* Final CTA */
         .final-cta {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            color: #f5f1e8;
+            background: linear-gradient(135deg, #4A5F7F 0%, #3a4d63 100%);
+            color: white;
             text-align: center;
-            padding: 100px 0;
         }
         
         .final-cta h2 {
             font-size: 48px;
-            margin-bottom: 30px;
-            color: #f5f1e8;
+            margin-bottom: 20px;
         }
         
         .final-cta p {
             font-size: 20px;
-            line-height: 1.8;
             margin-bottom: 40px;
             opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .final-cta .btn-primary {
+            background: #8FA998;
+            font-size: 20px;
+            padding: 20px 50px;
         }
         
         .final-benefits {
@@ -630,51 +533,37 @@
             gap: 40px;
             margin-top: 30px;
             font-size: 16px;
-            flex-wrap: wrap;
-        }
-        
-        .final-benefits div {
-            color: #f5f1e8;
-            opacity: 0.9;
         }
         
         /* Footer */
         footer {
-            background: #1a1a1a;
-            color: #f5f1e8;
+            background: #4A5F7F;
+            color: white;
             padding: 60px 0 30px;
         }
         
         .footer-content {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 60px;
             margin-bottom: 40px;
         }
         
         .footer-column h4 {
-            font-size: 18px;
             margin-bottom: 20px;
-            color: #f5f1e8;
-        }
-        
-        .footer-column p {
-            color: #f5f1e8;
-            opacity: 0.8;
-            line-height: 1.6;
+            color: #F4D58D;
         }
         
         .footer-column ul {
             list-style: none;
-            padding: 0;
         }
         
         .footer-column li {
-            margin-bottom: 12px;
+            padding: 8px 0;
         }
         
         .footer-column a {
-            color: #f5f1e8;
+            color: white;
             text-decoration: none;
             opacity: 0.8;
             transition: opacity 0.3s;
@@ -687,55 +576,31 @@
         .footer-bottom {
             text-align: center;
             padding-top: 30px;
-            border-top: 1px solid rgba(245, 241, 232, 0.1);
-            color: #f5f1e8;
+            border-top: 1px solid rgba(255,255,255,0.1);
             opacity: 0.6;
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 36px;
             }
             
-            .hero h2 {
-                font-size: 18px;
-            }
-            
-            .hero-subheadline {
-                font-size: 16px;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
+            .problem-grid,
+            .products-grid,
+            .steps,
+            .examples-grid,
+            .pricing-grid,
+            .footer-content {
+                grid-template-columns: 1fr;
             }
             
             .trust-bar {
                 flex-direction: column;
-                gap: 20px;
+                gap: 15px;
             }
             
-            .problem-grid,
-            .products-grid,
-            .steps,
-            .examples-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .comparison-header,
-            .comparison-row {
-                grid-template-columns: 1fr;
-            }
-            
-            .comparison-cell:first-child {
-                border-right: none;
-                border-bottom: 1px solid rgba(139, 35, 50, 0.1);
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
+            .cta-buttons {
+                flex-direction: column;
             }
         }
     </style>
@@ -754,24 +619,25 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Turn Your <span class="highlight">Style</span> Into Income</h1>
-            <h2>Your followers already ask for your recommendations. Now they can pay for them.</h2>
-            <p class="hero-subheadline">Set your own prices. Get paid instantly. Keep 100% during beta.<br>
-            The second income stream that doesn't depend on affiliate commissions.</p>
+            <h1>Stop giving it all away for free — <span class="highlight">make money from everything your followers already love.</span></h1>
+            <h2>Monetize the things you can't link — your taste, your knowledge, your world.</h2>
+            <p style="max-width: 800px; margin: 0 auto 40px; font-size: 18px;">
+                Stop answering "Where's that from?" for free. Turn your style, recommendations, 
+                and expertise into products your followers actually buy.
+            </p>
             
             <div class="cta-buttons">
-                <a href="#waitlist" class="btn-primary">Join the Waitlist - It's Free →</a>
-                <a href="#how-it-works" class="btn-secondary">See How It Works</a>
+                <a href="#waitlist" class="btn-primary">Join the Waitlist →</a>
+                <a href="#how-it-works" class="btn-secondary">See How It Works ↓</a>
             </div>
             
             <div class="trust-bar">
-                <div class="trust-item">⚡ Instant Payouts (2-3 days)</div>
-                <div class="trust-item">💰 You Set Your Prices</div>
-                <div class="trust-item">🎯 No Follower Minimum</div>
-                <div class="trust-item">✨ Keep 100% During Beta</div>
+                <div class="trust-item">✓ No follower minimums</div>
+                <div class="trust-item">✓ Instant Stripe payouts</div>
+                <div class="trust-item">✓ You own your customer emails</div>
             </div>
             
-            <p class="social-proof">Join 500+ creators building their second income stream</p>
+            <div class="social-proof">Join 500+ creators on the waitlist</div>
         </div>
     </section>
 
@@ -795,10 +661,9 @@
                 <div class="problem-card">
                     <h3>💸</h3>
                     <h4>Meanwhile...</h4>
-                    <p style="margin-bottom: 8px;">Affiliate programs take 30-60 days to pay</p>
-                    <p style="margin-bottom: 8px;">You earn 3-8% commission on what followers buy</p>
-                    <p style="margin-bottom: 8px;">Brand deals require 50K+ followers</p>
-                    <p style="font-weight: 600; color: #8B2332; margin-top: 16px;">You're stuck waiting and hoping</p>
+                    <p>Big affiliates need 10K+ followers (LTK, ShopStyle)</p>
+                    <p>Brand deals want 50K+ followers</p>
+                    <p style="font-weight: 600; color: #B08968; margin-top: 10px;">You make $0-200/month despite 10+ hours of work</p>
                 </div>
                 
                 <div class="problem-card">
@@ -806,7 +671,7 @@
                     <h4>But here's the thing:</h4>
                     <p>Your 8K followers trust you MORE than mega-influencers</p>
                     <p>They're already asking for your recommendations</p>
-                    <p style="font-weight: 600; color: #8B2332; margin-top: 10px;">They would pay for your knowledge—directly</p>
+                    <p style="font-weight: 600; color: #8FA998; margin-top: 10px;">They would pay for your knowledge</p>
                 </div>
             </div>
             
@@ -816,125 +681,12 @@
         </div>
     </section>
 
-    <!-- Comparison Section -->
-    <section class="comparison">
-        <div class="container">
-            <div class="section-header">
-                <h2>TheStyleKit vs. Traditional Affiliate Marketing</h2>
-                <p>Why choose? Do both and maximize your income.</p>
-            </div>
-            
-            <div class="comparison-table">
-                <div class="comparison-header">
-                    <div>Affiliate Programs</div>
-                    <div>TheStyleKit</div>
-                </div>
-                
-                <div class="comparison-row">
-                    <div class="comparison-cell">Wait 30-60 days for payment</div>
-                    <div class="comparison-cell">✓ Get paid in 2-3 days via Stripe</div>
-                </div>
-                
-                <div class="comparison-row">
-                    <div class="comparison-cell">Earn 3-8% commission</div>
-                    <div class="comparison-cell">✓ Keep 100% during beta, then 85%</div>
-                </div>
-                
-                <div class="comparison-row">
-                    <div class="comparison-cell">No control over pricing</div>
-                    <div class="comparison-cell">✓ Set your own prices</div>
-                </div>
-                
-                <div class="comparison-row">
-                    <div class="comparison-cell">Need large following for approval</div>
-                    <div class="comparison-cell">✓ Start with any follower count</div>
-                </div>
-                
-                <div class="comparison-row">
-                    <div class="comparison-cell">Hope followers buy through your link</div>
-                    <div class="comparison-cell">✓ Sell your expertise directly</div>
-                </div>
-            </div>
-            
-            <div class="callout-box" style="margin-top: 60px;">
-                💡 Pro Tip: Keep your affiliate links! TheStyleKit works ALONGSIDE your affiliate income, not instead of it. Share your Amazon finds on Instagram + sell your "How to Style Amazon Finds" guide. Double income from the same content.
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section class="products" id="products">
-        <div class="container">
-            <div class="section-header">
-                <h2>What You Can Sell</h2>
-                <p>Package your expertise once. Sell it forever.</p>
-            </div>
-            
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-icon">📋</div>
-                    <h3>Style Guides & Lookbooks</h3>
-                    <p>Your personal styling advice in a downloadable format. PDFs, docs, or curated image collections that solve specific style problems.</p>
-                    <div class="product-examples">
-                        <h4>Examples (you set the price):</h4>
-                        <ul>
-                            <li>• "Summer Capsule Wardrobe" - $29</li>
-                            <li>• "Date Night Outfit Ideas" - $15</li>
-                            <li>• "How to Style Wide-Leg Pants" - $12</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-icon">🗺️</div>
-                    <h3>Travel & City Guides</h3>
-                    <p>Your insider knowledge of cities, neighborhoods, and hidden gems packaged into valuable guides.</p>
-                    <div class="product-examples">
-                        <h4>Examples (you set the price):</h4>
-                        <ul>
-                            <li>• "48 Hours in Paris" - $34</li>
-                            <li>• "Best Coffee Shops in NYC" - $15</li>
-                            <li>• "My LA Restaurant Map" - $25</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-icon">🍽️</div>
-                    <h3>Food & Restaurant Lists</h3>
-                    <p>Curated collections of your favorite spots, tested recipes, or food recommendations by neighborhood.</p>
-                    <div class="product-examples">
-                        <h4>Examples (you set the price):</h4>
-                        <ul>
-                            <li>• "Best Brunch Spots" - $12</li>
-                            <li>• "Romantic Date Restaurants" - $20</li>
-                            <li>• "Food Tour Itinerary" - $30</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-icon">💬</div>
-                    <h3>1-on-1 Consultations</h3>
-                    <p>Sell your time for personalized advice. Style consultations, trip planning, or expert Q&A sessions.</p>
-                    <div class="product-examples">
-                        <h4>Examples (you set the price):</h4>
-                        <ul>
-                            <li>• "30-Min Style Consultation" - $75</li>
-                            <li>• "Custom Trip Planning" - $150</li>
-                            <li>• "Closet Audit Call" - $100</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- How It Works -->
     <section class="how-it-works" id="how-it-works">
         <div class="container">
             <div class="section-header">
-                <h2>From Setup to First Sale in 30 Minutes</h2>
+                <h2>From Setup to First Sale in 15 Minutes</h2>
             </div>
             
             <div class="steps">
@@ -947,7 +699,7 @@
                 <div class="step">
                     <div class="step-number">2</div>
                     <h3>Upload Your First Product</h3>
-                    <p>Title, description, YOUR price, upload your PDF/doc. Takes 20 minutes.</p>
+                    <p>Title, description, price, upload your PDF/doc. Takes 20 minutes.</p>
                 </div>
                 
                 <div class="step">
@@ -959,7 +711,7 @@
                 <div class="step">
                     <div class="step-number">4</div>
                     <h3>Get Paid Instantly</h3>
-                    <p>Money hits your bank in 2-3 days (not 60+ like affiliates). Keep 100% during beta. No waiting. No hoping they bought.</p>
+                    <p>Stripe deposits money directly to your account. You keep 90% during beta.</p>
                 </div>
             </div>
         </div>
@@ -980,7 +732,7 @@
                     </div>
                     <div class="example-content">
                         <div class="example-products">
-                            <h4>Products (she set her own prices):</h4>
+                            <h4>Products:</h4>
                             <ul>
                                 <li>• "European Summer Capsule" - $29</li>
                                 <li>• "Style White Jeans 15 Ways" - $19</li>
@@ -990,7 +742,6 @@
                         <div class="example-result">
                             <strong>First month: $2,400</strong>
                             <div class="example-quote">"I was giving this away in DMs for years!"</div>
-                            <div class="example-detail">Priced once, earns forever. No 5% commissions. No 60-day wait. Kept 100% during beta = $2,400 in her pocket.</div>
                         </div>
                     </div>
                 </div>
@@ -1002,7 +753,7 @@
                     </div>
                     <div class="example-content">
                         <div class="example-products">
-                            <h4>Products (he set his own prices):</h4>
+                            <h4>Products:</h4>
                             <ul>
                                 <li>• "48 Hours in Paris" - $34</li>
                                 <li>• "Best Paris Restaurants" - $24</li>
@@ -1012,7 +763,6 @@
                         <div class="example-result">
                             <strong>First month: $2,726</strong>
                             <div class="example-quote">"Setup took 20 minutes. Game-changer."</div>
-                            <div class="example-detail">Kept 100% during beta. Gets paid in 3 days, not 60.</div>
                         </div>
                     </div>
                 </div>
@@ -1024,7 +774,7 @@
                     </div>
                     <div class="example-content">
                         <div class="example-products">
-                            <h4>Products (she set her own prices):</h4>
+                            <h4>Products:</h4>
                             <ul>
                                 <li>• "NYC Hidden Gems Map" - $19</li>
                                 <li>• "Best Date Night Spots" - $15</li>
@@ -1034,7 +784,6 @@
                         <div class="example-result">
                             <strong>First month: $1,340</strong>
                             <div class="example-quote">"They were already asking. Now they pay."</div>
-                            <div class="example-detail">Full control over pricing. Instant payouts. Still runs affiliate links too.</div>
                         </div>
                     </div>
                 </div>
@@ -1049,24 +798,16 @@
                 <h2>Simple, Transparent Pricing</h2>
             </div>
             
-            <p class="pricing-intro">
-                You set the price. You keep 100% during beta. You get paid fast.<br>
-                No more waiting 60 days for your 5% commission.
-            </p>
-            
-            <div class="pricing-grid">
+            <div class="pricing-grid" style="justify-content: center;">
                 <div class="pricing-card">
                     <h3>Free</h3>
                     <p>Perfect for getting started</p>
                     <div class="price-amount">$0<span>/month</span></div>
                     <ul class="pricing-features">
-                        <li>Keep 100% during beta</li>
-                        <li>15% platform fee after beta</li>
+                        <li>15% platform fee on sales</li>
                         <li>Unlimited products</li>
-                        <li>Set your own prices</li>
-                        <li>Instant payouts (2-3 days)</li>
                         <li>Basic analytics</li>
-                        <li>Secure payments via Stripe</li>
+                        <li>Secure payments</li>
                         <li>Email collection</li>
                         <li>Customer support</li>
                     </ul>
@@ -1075,7 +816,7 @@
             </div>
             
             <div class="callout-box" style="margin-top: 60px;">
-                🎁 Beta Special: First 100 creators keep 100% of sales during beta, then get 10% fees forever (instead of 15%)
+                🎁 Beta Special: First 100 creators get 10% fees forever (instead of 15%)
             </div>
         </div>
     </section>
@@ -1083,20 +824,17 @@
     <!-- Final CTA -->
     <section class="final-cta" id="waitlist">
         <div class="container">
-            <h2>Add a Second Income Stream This Week</h2>
-            <p>Your DMs are full of people asking for recommendations.<br>
-            Your affiliate links earn you 5% after 60 days.<br>
-            Your style kits earn you 100% in 3 days (during beta).<br><br>
-            <strong>Why choose? Do both.</strong></p>
+            <h2>Stop Giving Your Knowledge Away for Free</h2>
+            <p>Your DMs are full of people asking for your recommendations.<br>
+            Your style should pay your rent.<br>
+            Join 500+ creators who are done working for free.</p>
             
             <a href="#" class="btn-primary">Join the Waitlist - It's Free →</a>
             
             <div class="final-benefits">
                 <div>✓ No credit card required</div>
                 <div>✓ No follower minimums</div>
-                <div>✓ Keep 100% during beta</div>
-                <div>✓ Set your own prices</div>
-                <div>✓ Get paid in 2-3 days</div>
+                <div>✓ 90% payout during beta</div>
             </div>
             
             <p style="margin-top: 40px; font-size: 16px; opacity: 0.8;">
