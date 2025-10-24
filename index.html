@@ -1,111 +1,1146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StyleKit — Turn Your Taste Into Income</title>
-  <meta name="description" content="StyleKit helps micro-influencers turn their recommendations, style tips, and experiences into monetizable mini kits. No waiting, no gatekeepers — just you and your audience.">
-  
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  
-  <!-- Styles -->
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #F8F7F3;
-      color: #1F3A3D;
-      line-height: 1.6;
-      text-align: center;
-    }
-    header {
-      padding: 100px 20px 60px;
-      background: linear-gradient(to bottom right, #EBE7DD, #E8E4D8);
-    }
-    h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 3rem;
-      color: #1F3A3D;
-      margin-bottom: 20px;
-    }
-    p {
-      max-width: 640px;
-      margin: 0 auto 25px;
-      font-size: 1.15rem;
-      color: #333;
-    }
-    a.cta {
-      display: inline-block;
-      padding: 14px 30px;
-      background-color: #A58956;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s;
-    }
-    a.cta:hover {
-      background-color: #8A7345;
-    }
-    section {
-      padding: 80px 20px;
-      background-color: #EBE7DD;
-    }
-    section:nth-of-type(odd) {
-      background-color: #F8F7F3;
-    }
-    h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #1F3A3D;
-    }
-    footer {
-      background-color: #1F3A3D;
-      color: white;
-      padding: 25px;
-      font-size: 0.9rem;
-    }
-    @media (max-width: 768px) {
-      h1 { font-size: 2.2rem; }
-      h2 { font-size: 1.6rem; }
-      p { font-size: 1rem; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheStyleKit.ai - Turn Your Style Into Income</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f5f1e8;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(245, 241, 232, 0.98);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(139, 35, 50, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+        
+        .logo span {
+            color: #8B2332;
+        }
+        
+        .header-cta {
+            background: #8B2332;
+            color: #f5f1e8;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .header-cta:hover {
+            background: #6d1b27;
+            transform: translateY(-1px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #f5f1e8 0%, #ede5d8 100%);
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .hero h1 .highlight {
+            color: #8B2332;
+        }
+        
+        .hero h2 {
+            font-size: 24px;
+            font-weight: 400;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-subheadline {
+            font-size: 20px;
+            font-weight: 600;
+            color: #8B2332;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .btn-primary {
+            background: #8B2332;
+            color: #f5f1e8;
+            padding: 18px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(139, 35, 50, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: #6d1b27;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(139, 35, 50, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #f5f1e8;
+            color: #1a1a1a;
+            padding: 18px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-block;
+            border: 2px solid #1a1a1a;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: #1a1a1a;
+            color: #f5f1e8;
+        }
+        
+        .trust-bar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            font-size: 16px;
+            color: #1a1a1a;
+            flex-wrap: wrap;
+        }
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+        }
+        
+        .social-proof {
+            margin-top: 30px;
+            color: #8B2332;
+            font-weight: 600;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+        
+        .section-header p {
+            font-size: 20px;
+            color: #1a1a1a;
+            opacity: 0.8;
+        }
+        
+        /* Callout Box */
+        .callout-box {
+            background: #8B2332;
+            color: #f5f1e8;
+            padding: 30px 40px;
+            border-radius: 16px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.6;
+            box-shadow: 0 4px 15px rgba(139, 35, 50, 0.2);
+        }
+        
+        /* Problem Section */
+        .problem {
+            background: white;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .problem-card {
+            padding: 40px;
+            background: #f5f1e8;
+            border-radius: 16px;
+            border: 2px solid rgba(139, 35, 50, 0.1);
+        }
+        
+        .problem-card h3 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .problem-card h4 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        
+        .problem-card p {
+            color: #1a1a1a;
+            line-height: 1.8;
+        }
+        
+        .transition-line {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            color: #8B2332;
+            margin-top: 60px;
+        }
+        
+        /* Comparison Section */
+        .comparison {
+            background: #1a1a1a;
+            color: #f5f1e8;
+        }
+        
+        .comparison .section-header h2 {
+            color: #f5f1e8;
+        }
+        
+        .comparison .section-header p {
+            color: #f5f1e8;
+        }
+        
+        .comparison-table {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #f5f1e8;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .comparison-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: #2a2a2a;
+            color: #f5f1e8;
+        }
+        
+        .comparison-header div {
+            padding: 24px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .comparison-header div:first-child {
+            border-right: 2px solid #1a1a1a;
+        }
+        
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 1px solid rgba(139, 35, 50, 0.1);
+        }
+        
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+        
+        .comparison-cell {
+            padding: 24px;
+            color: #1a1a1a;
+        }
+        
+        .comparison-cell:first-child {
+            border-right: 2px solid rgba(139, 35, 50, 0.1);
+            opacity: 0.7;
+        }
+        
+        .comparison-cell:last-child {
+            background: rgba(139, 35, 50, 0.05);
+            font-weight: 600;
+        }
+        
+        /* Products Section */
+        .products {
+            background: linear-gradient(135deg, #f5f1e8 0%, #ede5d8 100%);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .product-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            border: 2px solid rgba(139, 35, 50, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(139, 35, 50, 0.15);
+        }
+        
+        .product-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .product-card h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+        
+        .product-card p {
+            color: #1a1a1a;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        
+        .product-examples {
+            background: #f5f1e8;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+        
+        .product-examples h4 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #8B2332;
+        }
+        
+        .product-examples ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .product-examples li {
+            padding: 8px 0;
+            color: #1a1a1a;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            background: white;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: #8B2332;
+            color: #f5f1e8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        .step h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+        
+        .step p {
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        
+        /* Examples Section */
+        .examples {
+            background: linear-gradient(135deg, #f5f1e8 0%, #ede5d8 100%);
+        }
+        
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .example-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            border: 2px solid rgba(139, 35, 50, 0.1);
+        }
+        
+        .example-header {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f5f1e8;
+        }
+        
+        .example-header h3 {
+            font-size: 20px;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+        
+        .example-header p {
+            color: #1a1a1a;
+            opacity: 0.7;
+            font-size: 14px;
+        }
+        
+        .example-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .example-products h4 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #8B2332;
+        }
+        
+        .example-products ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .example-products li {
+            padding: 6px 0;
+            color: #1a1a1a;
+        }
+        
+        .example-result {
+            background: #f5f1e8;
+            padding: 20px;
+            border-radius: 12px;
+        }
+        
+        .example-result strong {
+            display: block;
+            font-size: 20px;
+            color: #8B2332;
+            margin-bottom: 8px;
+        }
+        
+        .example-quote {
+            font-style: italic;
+            color: #1a1a1a;
+            margin-top: 8px;
+        }
+        
+        .example-detail {
+            font-size: 14px;
+            color: #1a1a1a;
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            background: white;
+        }
+        
+        .pricing-intro {
+            text-align: center;
+            font-size: 22px;
+            color: #8B2332;
+            font-weight: 600;
+            margin-bottom: 50px;
+            line-height: 1.6;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: #f5f1e8;
+            padding: 50px;
+            border-radius: 16px;
+            border: 3px solid #8B2332;
+            text-align: center;
+        }
+        
+        .pricing-card h3 {
+            font-size: 32px;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+        
+        .pricing-card > p {
+            color: #1a1a1a;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+        
+        .price-amount {
+            font-size: 56px;
+            font-weight: 700;
+            color: #8B2332;
+            margin-bottom: 30px;
+        }
+        
+        .price-amount span {
+            font-size: 24px;
+            opacity: 0.7;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .pricing-features li {
+            padding: 12px 0;
+            color: #1a1a1a;
+            border-bottom: 1px solid rgba(139, 35, 50, 0.1);
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-features li:before {
+            content: "✓ ";
+            color: #8B2332;
+            font-weight: 700;
+            margin-right: 8px;
+        }
+        
+        .pricing-cta {
+            background: #8B2332;
+            color: #f5f1e8;
+            padding: 18px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .pricing-cta:hover {
+            background: #6d1b27;
+            transform: translateY(-2px);
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            color: #f5f1e8;
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .final-cta h2 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: #f5f1e8;
+        }
+        
+        .final-cta p {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .final-benefits {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            font-size: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .final-benefits div {
+            color: #f5f1e8;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #f5f1e8;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #f5f1e8;
+        }
+        
+        .footer-column p {
+            color: #f5f1e8;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column a {
+            color: #f5f1e8;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .footer-column a:hover {
+            opacity: 1;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(245, 241, 232, 0.1);
+            color: #f5f1e8;
+            opacity: 0.6;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero h2 {
+                font-size: 18px;
+            }
+            
+            .hero-subheadline {
+                font-size: 16px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .trust-bar {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .problem-grid,
+            .products-grid,
+            .steps,
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-header,
+            .comparison-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-cell:first-child {
+                border-right: none;
+                border-bottom: 1px solid rgba(139, 35, 50, 0.1);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <header>
-    <h1>Your Followers Trust You More Than Any Celebrity</h1>
-    <p>Stop giving away your taste for free. Turn your recommendations, how-to videos, and favorite finds into mini kits that people can buy — directly from you.</p>
-    <a href="#" class="cta">Join the Beta →</a>
-  </header>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">TheStyleKit<span>.ai</span></div>
+                <a href="#waitlist" class="header-cta">Join Waitlist</a>
+            </div>
+        </div>
+    </header>
 
-  <section>
-    <h2>Why StyleKit</h2>
-    <p>StyleKit lets micro-influencers turn influence into direct income. Sell styling sessions, curated maps, product picks, and more — with instant Stripe payments and full ownership of your audience data.</p>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Turn Your <span class="highlight">Style</span> Into Income</h1>
+            <h2>Your followers already ask for your recommendations. Now they can pay for them.</h2>
+            <p class="hero-subheadline">Set your own prices. Get paid instantly. Keep 100% during beta.<br>
+            The second income stream that doesn't depend on affiliate commissions.</p>
+            
+            <div class="cta-buttons">
+                <a href="#waitlist" class="btn-primary">Join the Waitlist - It's Free →</a>
+                <a href="#how-it-works" class="btn-secondary">See How It Works</a>
+            </div>
+            
+            <div class="trust-bar">
+                <div class="trust-item">⚡ Instant Payouts (2-3 days)</div>
+                <div class="trust-item">💰 You Set Your Prices</div>
+                <div class="trust-item">🎯 No Follower Minimum</div>
+                <div class="trust-item">✨ Keep 100% During Beta</div>
+            </div>
+            
+            <p class="social-proof">Join 500+ creators building their second income stream</p>
+        </div>
+    </section>
 
-  <section>
-    <h2>What You Can Offer</h2>
-    <p>Monetize your knowledge and taste — from travel itineraries to shopping lists and restaurant guides — and charge what you’re worth. Create once, earn forever.</p>
-    <a href="#" class="cta">Start Your Kit →</a>
-  </section>
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <div class="section-header">
+                <h2>You're Running a Free Consulting Business in Your DMs</h2>
+            </div>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>📱</h3>
+                    <h4>"Where's that dress from?"</h4>
+                    <p>"Best restaurants in your city?"<br>
+                    "How do you style white jeans?"<br>
+                    "Worth visiting?"</p>
+                    <p style="margin-top: 20px; font-weight: 600;">You answer. For free. 50 times a week.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>💸</h3>
+                    <h4>Meanwhile...</h4>
+                    <p style="margin-bottom: 8px;">Affiliate programs take 30-60 days to pay</p>
+                    <p style="margin-bottom: 8px;">You earn 3-8% commission on what followers buy</p>
+                    <p style="margin-bottom: 8px;">Brand deals require 50K+ followers</p>
+                    <p style="font-weight: 600; color: #8B2332; margin-top: 16px;">You're stuck waiting and hoping</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>🎯</h3>
+                    <h4>But here's the thing:</h4>
+                    <p>Your 8K followers trust you MORE than mega-influencers</p>
+                    <p>They're already asking for your recommendations</p>
+                    <p style="font-weight: 600; color: #8B2332; margin-top: 10px;">They would pay for your knowledge—directly</p>
+                </div>
+            </div>
+            
+            <div class="transition-line">
+                What if every DM question became income instead of free labor?
+            </div>
+        </div>
+    </section>
 
-  <section>
-    <h2>How It Works</h2>
-    <p>1. Create your first kit in 10 minutes<br>
-       2. Share your page on Instagram or TikTok<br>
-       3. Get paid instantly when followers buy your kits</p>
-  </section>
+    <!-- Comparison Section -->
+    <section class="comparison">
+        <div class="container">
+            <div class="section-header">
+                <h2>TheStyleKit vs. Traditional Affiliate Marketing</h2>
+                <p>Why choose? Do both and maximize your income.</p>
+            </div>
+            
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div>Affiliate Programs</div>
+                    <div>TheStyleKit</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell">Wait 30-60 days for payment</div>
+                    <div class="comparison-cell">✓ Get paid in 2-3 days via Stripe</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell">Earn 3-8% commission</div>
+                    <div class="comparison-cell">✓ Keep 100% during beta, then 85%</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell">No control over pricing</div>
+                    <div class="comparison-cell">✓ Set your own prices</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell">Need large following for approval</div>
+                    <div class="comparison-cell">✓ Start with any follower count</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell">Hope followers buy through your link</div>
+                    <div class="comparison-cell">✓ Sell your expertise directly</div>
+                </div>
+            </div>
+            
+            <div class="callout-box" style="margin-top: 60px;">
+                💡 Pro Tip: Keep your affiliate links! TheStyleKit works ALONGSIDE your affiliate income, not instead of it. Share your Amazon finds on Instagram + sell your "How to Style Amazon Finds" guide. Double income from the same content.
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    © 2025 TheStyleKit.ai — All rights reserved.
-  </footer>
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>What You Can Sell</h2>
+                <p>Package your expertise once. Sell it forever.</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">📋</div>
+                    <h3>Style Guides & Lookbooks</h3>
+                    <p>Your personal styling advice in a downloadable format. PDFs, docs, or curated image collections that solve specific style problems.</p>
+                    <div class="product-examples">
+                        <h4>Examples (you set the price):</h4>
+                        <ul>
+                            <li>• "Summer Capsule Wardrobe" - $29</li>
+                            <li>• "Date Night Outfit Ideas" - $15</li>
+                            <li>• "How to Style Wide-Leg Pants" - $12</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">🗺️</div>
+                    <h3>Travel & City Guides</h3>
+                    <p>Your insider knowledge of cities, neighborhoods, and hidden gems packaged into valuable guides.</p>
+                    <div class="product-examples">
+                        <h4>Examples (you set the price):</h4>
+                        <ul>
+                            <li>• "48 Hours in Paris" - $34</li>
+                            <li>• "Best Coffee Shops in NYC" - $15</li>
+                            <li>• "My LA Restaurant Map" - $25</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">🍽️</div>
+                    <h3>Food & Restaurant Lists</h3>
+                    <p>Curated collections of your favorite spots, tested recipes, or food recommendations by neighborhood.</p>
+                    <div class="product-examples">
+                        <h4>Examples (you set the price):</h4>
+                        <ul>
+                            <li>• "Best Brunch Spots" - $12</li>
+                            <li>• "Romantic Date Restaurants" - $20</li>
+                            <li>• "Food Tour Itinerary" - $30</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">💬</div>
+                    <h3>1-on-1 Consultations</h3>
+                    <p>Sell your time for personalized advice. Style consultations, trip planning, or expert Q&A sessions.</p>
+                    <div class="product-examples">
+                        <h4>Examples (you set the price):</h4>
+                        <ul>
+                            <li>• "30-Min Style Consultation" - $75</li>
+                            <li>• "Custom Trip Planning" - $150</li>
+                            <li>• "Closet Audit Call" - $100</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>From Setup to First Sale in 30 Minutes</h2>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create Your Page</h3>
+                    <p>Pick a template. Customize colors. Add your photo. Takes 10 minutes.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Upload Your First Product</h3>
+                    <p>Title, description, YOUR price, upload your PDF/doc. Takes 20 minutes.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Share Your Link</h3>
+                    <p>One link works everywhere: Instagram, TikTok, YouTube, email.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Get Paid Instantly</h3>
+                    <p>Money hits your bank in 2-3 days (not 60+ like affiliates). Keep 100% during beta. No waiting. No hoping they bought.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section class="examples">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Creators Are Selling</h2>
+            </div>
+            
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-header">
+                        <h3>@sarahstyle</h3>
+                        <p>Fashion micro-influencer • 8,200 followers</p>
+                    </div>
+                    <div class="example-content">
+                        <div class="example-products">
+                            <h4>Products (she set her own prices):</h4>
+                            <ul>
+                                <li>• "European Summer Capsule" - $29</li>
+                                <li>• "Style White Jeans 15 Ways" - $19</li>
+                                <li>• "Amazon Fashion Under $50" - $15</li>
+                            </ul>
+                        </div>
+                        <div class="example-result">
+                            <strong>First month: $2,400</strong>
+                            <div class="example-quote">"I was giving this away in DMs for years!"</div>
+                            <div class="example-detail">Priced once, earns forever. No 5% commissions. No 60-day wait. Kept 100% during beta = $2,400 in her pocket.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <div class="example-header">
+                        <h3>@alexexplores</h3>
+                        <p>Travel creator • 12,500 followers</p>
+                    </div>
+                    <div class="example-content">
+                        <div class="example-products">
+                            <h4>Products (he set his own prices):</h4>
+                            <ul>
+                                <li>• "48 Hours in Paris" - $34</li>
+                                <li>• "Best Paris Restaurants" - $24</li>
+                                <li>• "1-Hour Trip Planning" - $150</li>
+                            </ul>
+                        </div>
+                        <div class="example-result">
+                            <strong>First month: $2,726</strong>
+                            <div class="example-quote">"Setup took 20 minutes. Game-changer."</div>
+                            <div class="example-detail">Kept 100% during beta. Gets paid in 3 days, not 60.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <div class="example-header">
+                        <h3>@foodiemia</h3>
+                        <p>Food blogger • 6,800 followers</p>
+                    </div>
+                    <div class="example-content">
+                        <div class="example-products">
+                            <h4>Products (she set her own prices):</h4>
+                            <ul>
+                                <li>• "NYC Hidden Gems Map" - $19</li>
+                                <li>• "Best Date Night Spots" - $15</li>
+                                <li>• "Favorite Brunch Spots" - $12</li>
+                            </ul>
+                        </div>
+                        <div class="example-result">
+                            <strong>First month: $1,340</strong>
+                            <div class="example-quote">"They were already asking. Now they pay."</div>
+                            <div class="example-detail">Full control over pricing. Instant payouts. Still runs affiliate links too.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent Pricing</h2>
+            </div>
+            
+            <p class="pricing-intro">
+                You set the price. You keep 100% during beta. You get paid fast.<br>
+                No more waiting 60 days for your 5% commission.
+            </p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <p>Perfect for getting started</p>
+                    <div class="price-amount">$0<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li>Keep 100% during beta</li>
+                        <li>15% platform fee after beta</li>
+                        <li>Unlimited products</li>
+                        <li>Set your own prices</li>
+                        <li>Instant payouts (2-3 days)</li>
+                        <li>Basic analytics</li>
+                        <li>Secure payments via Stripe</li>
+                        <li>Email collection</li>
+                        <li>Customer support</li>
+                    </ul>
+                    <a href="#waitlist" class="pricing-cta">Start Free</a>
+                </div>
+            </div>
+            
+            <div class="callout-box" style="margin-top: 60px;">
+                🎁 Beta Special: First 100 creators keep 100% of sales during beta, then get 10% fees forever (instead of 15%)
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="waitlist">
+        <div class="container">
+            <h2>Add a Second Income Stream This Week</h2>
+            <p>Your DMs are full of people asking for recommendations.<br>
+            Your affiliate links earn you 5% after 60 days.<br>
+            Your style kits earn you 100% in 3 days (during beta).<br><br>
+            <strong>Why choose? Do both.</strong></p>
+            
+            <a href="#" class="btn-primary">Join the Waitlist - It's Free →</a>
+            
+            <div class="final-benefits">
+                <div>✓ No credit card required</div>
+                <div>✓ No follower minimums</div>
+                <div>✓ Keep 100% during beta</div>
+                <div>✓ Set your own prices</div>
+                <div>✓ Get paid in 2-3 days</div>
+            </div>
+            
+            <p style="margin-top: 40px; font-size: 16px; opacity: 0.8;">
+                Questions? DM us @thestylekit or email hello@thestylekit.ai
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>TheStyleKit.ai</h4>
+                    <p>Monetize your influence</p>
+                    <p style="margin-top: 20px; opacity: 0.8;">Made for nano & micro creators by creators who get it.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#examples">Examples</a></li>
+                        <li><a href="#waitlist">Beta Access</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                © 2025 TheStyleKit, Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
