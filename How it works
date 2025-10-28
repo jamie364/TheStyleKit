@@ -1,0 +1,32 @@
+<!-- In your main navigation -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html">See How It Works</a>
+    <a href="#waitlist">Get Early Access</a>
+</nav>
+```
+
+**URL will be:**
+```
+https://jamie364.github.io/TheStyleKit/how-it-works.html
+```
+
+---
+
+## **Option 2: Add Directly to Your Homepage** (Best for Conversions)
+
+### **Where to Place It:**
+
+**Your current homepage structure:**
+```
+1. Hero section (headline + CTA)
+2. Blog preview
+3. Waitlist form
+```
+
+**New structure:**
+```
+1. Hero section (headline + CTA)
+2. Blog preview  
+3. ← ADD "HOW IT WORKS" HERE
+4. Waitlist form (people sign up after seeing it!)
