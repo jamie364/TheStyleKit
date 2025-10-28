@@ -1,32 +1,689 @@
-<!-- In your main navigation -->
-<nav>
-    <a href="index.html">Home</a>
-    <a href="how-it-works.html">See How It Works</a>
-    <a href="#waitlist">Get Early Access</a>
-</nav>
-```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How TheStyleKit Works - Product Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #8FA998;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #1F3A3D;
+            margin-bottom: 10px;
+            font-size: 42px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 60px;
+            font-size: 18px;
+        }
+        
+        .mockup-section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .mockup-title {
+            color: #1F3A3D;
+            font-size: 24px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .mockup-description {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        /* Dashboard Mockup */
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background: #1F3A3D;
+            color: white;
+            border-radius: 12px 12px 0 0;
+            margin: -20px -20px 0 -20px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: #F5F1E8;
+            padding: 24px;
+            border-radius: 12px;
+            border-left: 4px solid #8FA998;
+        }
+        
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1F3A3D;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .products-section {
+            margin-top: 40px;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .btn-primary {
+            background: #8FA998;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .product-card {
+            background: white;
+            border: 2px solid #E5E5E5;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+            display: grid;
+            grid-template-columns: 60px 1fr auto;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .product-icon {
+            width: 60px;
+            height: 60px;
+            background: #F5F1E8;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+        
+        .product-info h3 {
+            color: #1F3A3D;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+        
+        .product-info p {
+            color: #999;
+            font-size: 14px;
+        }
+        
+        .product-stats {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .product-stat {
+            text-align: center;
+        }
+        
+        .product-stat-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1F3A3D;
+        }
+        
+        .product-stat-label {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #8FA998;
+            border: 2px solid #8FA998;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        /* Upload Screen */
+        .upload-area {
+            border: 3px dashed #8FA998;
+            border-radius: 12px;
+            padding: 60px;
+            text-align: center;
+            background: #F5F1E8;
+            margin: 30px 0;
+        }
+        
+        .upload-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+            text-align: left;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #1F3A3D;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #E5E5E5;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        
+        .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #E5E5E5;
+            border-radius: 8px;
+            font-size: 16px;
+            min-height: 120px;
+            font-family: inherit;
+        }
+        
+        .price-input-wrapper {
+            position: relative;
+        }
+        
+        .price-symbol {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .price-input {
+            padding-left: 36px;
+        }
+        
+        /* Product Page */
+        .product-page {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .product-cover {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #8FA998 0%, #6B8E7F 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+        }
+        
+        .product-page-content {
+            padding: 40px;
+        }
+        
+        .creator-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .creator-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #8FA998;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .product-page h2 {
+            font-size: 32px;
+            color: #1F3A3D;
+            margin-bottom: 16px;
+        }
+        
+        .product-description {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 32px;
+            font-size: 17px;
+        }
+        
+        .price-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px;
+            background: #F5F1E8;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .price-large {
+            font-size: 48px;
+            font-weight: bold;
+            color: #1F3A3D;
+        }
+        
+        .btn-buy {
+            background: #8FA998;
+            color: white;
+            padding: 16px 48px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin-top: 32px;
+        }
+        
+        .features-list li {
+            padding: 12px 0;
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .features-list li:before {
+            content: "✓";
+            color: #8FA998;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 20px;
+        }
+        
+        .highlight-box {
+            background: #FFF9E6;
+            border-left: 4px solid #FFD700;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .highlight-box strong {
+            color: #1F3A3D;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: #F5F1E8;
+            border-radius: 16px;
+            margin-top: 60px;
+        }
+        
+        .cta-section h2 {
+            color: #1F3A3D;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .product-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .product-stats {
+                justify-content: center;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <h1>How TheStyleKit Works</h1>
+        <p class="subtitle">See exactly what you'll get as a creator</p>
+        
+        <!-- DASHBOARD VIEW -->
+        <div class="mockup-section">
+            <h2 class="mockup-title">1. Your Creator Dashboard</h2>
+            <p class="mockup-description">The main hub where you manage everything - see your revenue, sales, and products at a glance</p>
+            
+            <div class="dashboard-header">
+                <div class="logo">TheStyleKit.ai</div>
+                <div class="user-menu">
+                    <span>jamie@example.com</span>
+                    <button class="btn-secondary" style="color: white; border-color: white;">Settings</button>
+                </div>
+            </div>
+            
+            <div style="padding: 30px;">
+                <h2 style="color: #1F3A3D; margin-bottom: 30px;">Welcome back, Jamie! 👋</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">$2,854</div>
+                        <div class="stat-label">Total Revenue</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">101</div>
+                        <div class="stat-label">Total Sales</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">101</div>
+                        <div class="stat-label">Email Subscribers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">3</div>
+                        <div class="stat-label">Active Products</div>
+                    </div>
+                </div>
+                
+                <div class="products-section">
+                    <div class="section-header">
+                        <h3 style="color: #1F3A3D; font-size: 24px;">Your Products</h3>
+                        <button class="btn-primary">+ Upload New Product</button>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-icon">📍</div>
+                        <div class="product-info">
+                            <h3>London Travel Guide</h3>
+                            <p>Created Oct 15, 2024</p>
+                        </div>
+                        <div class="product-stats">
+                            <div class="product-stat">
+                                <div class="product-stat-value">47</div>
+                                <div class="product-stat-label">Sales</div>
+                            </div>
+                            <div class="product-stat">
+                                <div class="product-stat-value">$1,363</div>
+                                <div class="product-stat-label">Revenue</div>
+                            </div>
+                            <button class="btn-secondary">Edit</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-icon">🎒</div>
+                        <div class="product-info">
+                            <h3>Paris Packing List</h3>
+                            <p>Created Oct 10, 2024</p>
+                        </div>
+                        <div class="product-stats">
+                            <div class="product-stat">
+                                <div class="product-stat-value">23</div>
+                                <div class="product-stat-label">Sales</div>
+                            </div>
+                            <div class="product-stat">
+                                <div class="product-stat-value">$437</div>
+                                <div class="product-stat-label">Revenue</div>
+                            </div>
+                            <button class="btn-secondary">Edit</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-icon">👗</div>
+                        <div class="product-info">
+                            <h3>Style Formula PDF</h3>
+                            <p>Created Oct 5, 2024</p>
+                        </div>
+                        <div class="product-stats">
+                            <div class="product-stat">
+                                <div class="product-stat-value">31</div>
+                                <div class="product-stat-label">Sales</div>
+                            </div>
+                            <div class="product-stat">
+                                <div class="product-stat-value">$1,054</div>
+                                <div class="product-stat-label">Revenue</div>
+                            </div>
+                            <button class="btn-secondary">Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- UPLOAD SCREEN -->
+        <div class="mockup-section">
+            <h2 class="mockup-title">2. Upload Your Product (5 Minutes)</h2>
+            <p class="mockup-description">Simple setup to start selling - no technical skills needed</p>
+            
+            <div style="padding: 20px;">
+                <h3 style="color: #1F3A3D; margin-bottom: 24px; font-size: 28px;">Create New Product</h3>
+                
+                <div class="upload-area">
+                    <div class="upload-icon">📄</div>
+                    <h3 style="color: #1F3A3D; margin-bottom: 12px;">Upload Your PDF</h3>
+                    <p style="color: #666;">Drag and drop or click to browse</p>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Product Name</label>
+                    <input type="text" class="form-input" placeholder="e.g., The Ultimate London Travel Guide" value="London Travel Guide">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Price</label>
+                    <div class="price-input-wrapper">
+                        <span class="price-symbol">$</span>
+                        <input type="number" class="form-input price-input" placeholder="29" value="29">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-textarea" placeholder="Describe what's included in your guide...">Discover London's best-kept secrets! This comprehensive guide includes:
 
-**URL will be:**
-```
-https://jamie364.github.io/TheStyleKit/how-it-works.html
-```
+- 12 hidden boutiques in Mayfair (with exact addresses)
+- Restaurant recommendations with specific dishes to order
+- Day-to-night outfit planning for London weather
+- Exclusive shopping tips from a local insider
+- Google Maps with all locations pinned
 
----
-
-## **Option 2: Add Directly to Your Homepage** (Best for Conversions)
-
-### **Where to Place It:**
-
-**Your current homepage structure:**
-```
-1. Hero section (headline + CTA)
-2. Blog preview
-3. Waitlist form
-```
-
-**New structure:**
-```
-1. Hero section (headline + CTA)
-2. Blog preview  
-3. ← ADD "HOW IT WORKS" HERE
-4. Waitlist form (people sign up after seeing it!)
+47 people have already used this guide to plan their perfect London trip!</textarea>
+                </div>
+                
+                <div class="highlight-box">
+                    <strong>Pro Tip:</strong>
+                    Include specific details about what's inside, mention social proof (how many people loved it), and explain the transformation (what they'll achieve).
+                </div>
+                
+                <button class="btn-primary" style="width: 100%; padding: 16px; font-size: 18px;">Create Product & Get Your Link</button>
+            </div>
+        </div>
+        
+        <!-- CUSTOMER VIEW -->
+        <div class="mockup-section">
+            <h2 class="mockup-title">3. What Your Customers See</h2>
+            <p class="mockup-description">Beautiful, professional product pages that convert visitors into buyers</p>
+            
+            <div class="product-page">
+                <div class="product-cover">
+                    📍
+                </div>
+                
+                <div class="product-page-content">
+                    <div class="creator-info">
+                        <div class="creator-avatar">J</div>
+                        <div>
+                            <strong style="color: #1F3A3D;">@jamie_brett</strong>
+                            <p style="color: #999; font-size: 14px; margin-top: 2px;">Travel Creator • 12K followers</p>
+                        </div>
+                    </div>
+                    
+                    <h2>The Ultimate London Travel Guide</h2>
+                    
+                    <p class="product-description">
+                        Discover London's best-kept secrets! I spent an entire week visiting boutiques, testing restaurants, and mapping out the perfect London experience so you don't have to.
+                        <br><br>
+                        This isn't your typical tourist guide - these are the insider spots locals actually go to. From hidden Mayfair boutiques to the exact table to request at The Chiltern Firehouse.
+                    </p>
+                    
+                    <ul class="features-list">
+                        <li>12 hidden boutiques in Mayfair with exact addresses</li>
+                        <li>Restaurant recommendations with specific dishes to order</li>
+                        <li>Day-to-night outfit planning for London weather</li>
+                        <li>Google Maps with all locations pre-pinned</li>
+                        <li>Makeup tips that actually work in London's climate</li>
+                        <li>Packing list for the perfect carry-on</li>
+                    </ul>
+                    
+                    <div style="background: #FFF9E6; padding: 20px; border-radius: 12px; margin: 32px 0;">
+                        <p style="color: #1F3A3D; font-style: italic;">
+                            "This guide saved me SO much time! I found boutiques I never would have discovered on my own. Worth every penny!" - Sarah, purchased Oct 2024
+                        </p>
+                    </div>
+                    
+                    <div class="price-section">
+                        <div>
+                            <div style="color: #666; font-size: 14px; margin-bottom: 4px;">ONE-TIME PURCHASE</div>
+                            <div class="price-large">$29</div>
+                        </div>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                    
+                    <p style="text-align: center; color: #999; font-size: 14px;">
+                        ✓ Instant download  •  ✓ PDF format  •  ✓ Money-back guarantee
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SHARE LINK SCREEN -->
+        <div class="mockup-section">
+            <h2 class="mockup-title">4. Your Share Link</h2>
+            <p class="mockup-description">One simple link to share everywhere - Instagram, TikTok, Pinterest, Stories</p>
+            
+            <div style="padding: 40px; text-align: center;">
+                <h3 style="color: #1F3A3D; font-size: 28px; margin-bottom: 16px;">Your Product Is Live! 🎉</h3>
+                <p style="color: #666; margin-bottom: 32px; font-size: 18px;">
+                    Share this link everywhere - Instagram bio, TikTok, Pinterest, Stories
+                </p>
+                
+                <div style="background: #F5F1E8; padding: 24px; border-radius: 12px; margin-bottom: 32px;">
+                    <div style="color: #666; font-size: 14px; margin-bottom: 8px;">YOUR PRODUCT LINK</div>
+                    <div style="font-size: 24px; color: #1F3A3D; font-weight: 600; font-family: monospace;">
+                        thestylekit.ai/jamie/london-guide
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; max-width: 600px; margin: 0 auto;">
+                    <button class="btn-secondary" style="padding: 16px;">📋 Copy Link</button>
+                    <button class="btn-secondary" style="padding: 16px;">📱 Share to Instagram</button>
+                    <button class="btn-secondary" style="padding: 16px;">📧 Email List</button>
+                </div>
+                
+                <div style="margin-top: 48px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    <h4 style="color: #1F3A3D; margin-bottom: 16px;">Quick Tips:</h4>
+                    <ul style="color: #666; line-height: 2;">
+                        <li>Add this link to your Instagram bio</li>
+                        <li>Post about it 2-3x per week for the first month</li>
+                        <li>Share customer reviews to build social proof</li>
+                        <li>Pin it to your Pinterest boards</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>Ready to Start Selling Your Expertise?</h2>
+            <p>Join the waitlist for early access to TheStyleKit</p>
+            <a href="index.html#waitlist" class="btn-primary" style="display: inline-block; padding: 18px 45px; font-size: 18px; text-decoration: none;">
+                Get Early Access →
+            </a>
+        </div>
+        
+    </div>
+</body>
+</html>
