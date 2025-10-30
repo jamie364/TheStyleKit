@@ -139,27 +139,46 @@
 .btn-primary {
     background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%) !important;
     color: white !important;
-    padding: 20px 50px !important;
-    font-size: 20px !important;
-    font-weight: 700 !important;
+    padding: 20px 48px !important;
+    font-size: 19px !important;
+    font-weight: 600 !important;
     border: none !important;
-    border-radius: 50px !important;
+    border-radius: 12px !important;
     cursor: pointer !important;
     text-decoration: none !important;
     display: inline-block !important;
-    transition: all 0.3s ease !important;
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5) !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    box-shadow: 
+        0 4px 15px rgba(255, 107, 107, 0.3),
+        0 10px 30px rgba(255, 107, 107, 0.2) !important;
+    letter-spacing: 0.3px !important;
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 30px rgba(255, 107, 107, 0.7) !important;
+    transform: translateY(-4px) scale(1.03) !important;
+    box-shadow: 
+        0 8px 25px rgba(255, 107, 107, 0.4),
+        0 15px 45px rgba(255, 107, 107, 0.3) !important;
     background: linear-gradient(135deg, #FF8E53 0%, #FF6B6B 100%) !important;
-    text-decoration: none !important;
 }
 
 .btn-primary:active {
-    transform: translateY(0) !important;
+    transform: translateY(-1px) scale(1.01) !important;
+    text-decoration: none !important;
+}
+
+/* Force remove underline */
+a.btn-primary,
+a.btn-primary:hover,
+a.btn-primary:focus,
+a.btn-primary:active,
+a.btn-primary:visited {
+    text-decoration: none !important;
+}
+
+a[data-tally-open].btn-primary {
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%) !important;
+    color: white !important;
     text-decoration: none !important;
 }
 
