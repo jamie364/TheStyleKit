@@ -160,6 +160,14 @@
 .btn-primary:active {
     transform: translateY(0);
 }
+* Force remove underline */
+a.btn-primary,
+a.btn-primary:hover,
+a.btn-primary:focus,
+a.btn-primary:active,
+a.btn-primary:visited {
+    text-decoration: none !important;
+}
 
 a[data-tally-open].btn-primary {
     background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%) !important;
