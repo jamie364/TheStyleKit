@@ -139,28 +139,31 @@
 .btn-primary {
     background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%) !important;
     color: white !important;
-    padding: 20px 50px;
-    font-size: 20px;
-    font-weight: 700;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
+    padding: 20px 50px !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    border: none !important;
+    border-radius: 50px !important;
+    cursor: pointer !important;
     text-decoration: none !important;
-    display: inline-block;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+    display: inline-block !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5) !important;
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(255, 107, 107, 0.7);
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 30px rgba(255, 107, 107, 0.7) !important;
     background: linear-gradient(135deg, #FF8E53 0%, #FF6B6B 100%) !important;
+    text-decoration: none !important;
 }
 
 .btn-primary:active {
-    transform: translateY(0);
+    transform: translateY(0) !important;
+    text-decoration: none !important;
 }
-* Force remove underline */
+
+/* Force remove underline */
 a.btn-primary,
 a.btn-primary:hover,
 a.btn-primary:focus,
@@ -172,6 +175,7 @@ a.btn-primary:visited {
 a[data-tally-open].btn-primary {
     background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%) !important;
     color: white !important;
+    text-decoration: none !important;
 }
 
 .btn-secondary {
@@ -191,7 +195,6 @@ a[data-tally-open].btn-primary {
     background: #1F3A3D;
     color: #EBE7DD;
 }
-
 .trust-bar {
     display: flex;
     justify-content: center;
