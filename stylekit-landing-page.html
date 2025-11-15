@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stop searching 'content ideas' every day. StyleKit is your AI Creative Director for fashion, beauty & lifestyle creators struggling with content burnout.">
+    <title>StyleKit — Your AI Creative Director</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --cream: #FAF8F5;
+            --charcoal: #2D2D2D;
+            --accent: #D4A574;
+            --accent-dark: #B8915F;
+            --light-gray: #F5F3F0;
+            --medium-gray: #8B8680;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--charcoal);
+            background: var(--cream);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+            padding: 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(212, 165, 116, 0.02) 0%, rgba(250, 248, 245, 0.5) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+            padding-left: 2rem;
+        }
+        
+        .hero-image {
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 1.2s ease-out;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            color: var(--charcoal);
+            text-align: left;
+        }
+        
+        .hero .subheadline {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: var(--medium-gray);
+            margin-bottom: 3rem;
+            font-weight: 300;
+            text-align: left;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1.25rem 3rem;
+            background: var(--charcoal);
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: 2px solid var(--charcoal);
+        }
+        
+        .cta-button:hover {
+            background: transparent;
+            color: var(--charcoal);
+            transform: translateY(-2px);
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: var(--charcoal);
+            border: 2px solid var(--charcoal);
+        }
+        
+        .cta-secondary:hover {
+            background: var(--charcoal);
+            color: var(--cream);
+        }
+        
+        /* Sections */
+        section {
+            padding: 8rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--medium-gray);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+        
+        /* Pain Points */
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .pain-card {
+            padding: 2.5rem;
+            background: white;
+            border: 1px solid rgba(45, 45, 45, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .pain-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+        
+        .pain-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+        
+        /* How It Works */
+        .steps {
+            display: grid;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+        
+        .step {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        
+        .step-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            color: var(--accent);
+            font-weight: 300;
+        }
+        
+        .step-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .step-content p {
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+        }
+        
+        /* Features */
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        
+        .feature {
+            padding: 2rem;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature p {
+            color: var(--medium-gray);
+        }
+        
+        /* Pricing */
+        .pricing-card {
+            max-width: 600px;
+            margin: 4rem auto;
+            padding: 4rem;
+            background: white;
+            border: 2px solid var(--charcoal);
+            text-align: center;
+        }
+        
+        .price-tag {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            margin: 2rem 0;
+            color: var(--charcoal);
+        }
+        
+        .price-regular {
+            text-decoration: line-through;
+            color: var(--medium-gray);
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        
+        .pricing-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(45, 45, 45, 0.1);
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Stats */
+        .stats {
+            background: var(--light-gray);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--medium-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+        }
+        
+        /* Testimonials */
+        .testimonial {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 3rem;
+            background: white;
+            border-left: 3px solid var(--accent);
+        }
+        
+        .testimonial-text {
+            font-size: 1.25rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--charcoal);
+        }
+        
+        .testimonial-author {
+            font-weight: 500;
+            color: var(--medium-gray);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--cream);
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 2rem 1.5rem;
+                min-height: auto;
+                gap: 2rem;
+            }
+            
+            .hero-content {
+                padding-left: 0;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                text-align: center;
+            }
+            
+            .hero .subheadline {
+                text-align: center;
+            }
+            
+            .hero-image {
+                order: -1;
+            }
+            
+            section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .step {
+                grid-template-columns: 60px 1fr;
+                gap: 1rem;
+            }
+            
+            .step-number {
+                font-size: 3rem;
+            }
+            
+            .pricing-card {
+                padding: 2rem;
+            }
+        }
+        
+        /* Luxury Details */
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: var(--accent);
+            margin: 2rem auto;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: var(--accent);
+            color: white;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">For Fashion, Beauty & Lifestyle Creators</span>
+            <h1>When You Don't Know What to Post — We Do.</h1>
+            <div class="divider"></div>
+            <p class="subheadline">
+                StyleKit analyzes your aesthetic, brand pillars, and creative identity to produce 
+                refined, on-brand content ideas.
+            </p>
+            <a href="#pricing" class="cta-button">Apply for Early Access</a>
+        </div>
+        <div class="hero-image">
+            <img src="hero-image.jpg" alt="StyleKit - Content strategy for fashion and lifestyle creators" loading="eager">
+        </div>
+    </section>
+
+    <!-- Pain Points -->
+    <section class="fade-in">
+        <h2 class="section-title">If You're Constantly Searching for...</h2>
+        <div class="divider"></div>
+        
+        <div class="pain-grid">
+            <div class="pain-card">
+                <h3>"content ideas"</h3>
+                <p>Spending hours every morning searching for what to post</p>
+            </div>
+            <div class="pain-card">
+                <h3>"creative burnout"</h3>
+                <p>Feeling creatively drained and inconsistent</p>
+            </div>
+            <div class="pain-card">
+                <h3>"brand aesthetic"</h3>
+                <p>Struggling to maintain a cohesive visual identity</p>
+            </div>
+            <div class="pain-card">
+                <h3>"content inspiration"</h3>
+                <p>Going down rabbit holes that don't match your brand</p>
+            </div>
+        </div>
+        
+        <p class="section-subtitle" style="margin-top: 3rem;">
+            You're not alone. And you're about to solve this forever.
+        </p>
+    </section>
+
+    <!-- Solution -->
+    <section class="fade-in" style="background: var(--light-gray); margin-left: 0; margin-right: 0; max-width: 100%;">
+        <h2 class="section-title">Never Search "Content Ideas" Again</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">
+            A personalized content strategy tailored to your aesthetic — not generic AI ideas.
+        </p>
+    </section>
+
+    <!-- How It Works -->
+    <section class="fade-in">
+        <h2 class="section-title">From Burned Out to Brand Consistent</h2>
+        <div class="divider"></div>
+        
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h3>Share Your Aesthetic</h3>
+                    <p>
+                        Upload your Pinterest board and answer our brand questionnaire. 
+                        We analyze your visual identity, tone, and content DNA to understand 
+                        what makes you uniquely YOU.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h3>Get Your Custom Strategy</h3>
+                    <p>
+                        Receive your personalized StyleKit: Your Aesthetic Framework, 30-day 
+                        Content Calendar, caption & script templates in YOUR voice, visual 
+                        direction guide, and brand positioning strategy.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h3>Create with Confidence</h3>
+                    <p>
+                        Stop overthinking. Stop searching. Just create cohesive, on-brand 
+                        content every single day without compromising your aesthetic standards.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="fade-in" style="background: white; margin: 0; max-width: 100%; padding: 8rem 2rem;">
+        <h2 class="section-title">Everything a Creator Needs</h2>
+        <div class="divider"></div>
+        
+        <div class="features-list" style="max-width: 1200px; margin: 4rem auto 0;">
+            <div class="feature">
+                <div class="feature-icon">✨</div>
+                <h3>Personal Branding Framework</h3>
+                <p>Your aesthetic DNA analyzed and documented</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">📅</div>
+                <h3>30-Day Content Calendar</h3>
+                <p>Never search "content ideas" again</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <h3>Your Brand Kit</h3>
+                <p>Colors, fonts, visual guidelines — all defined</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">📌</div>
+                <h3>Pinterest Aesthetic Analysis</h3>
+                <p>Turn aspiration into actionable strategy</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">💭</div>
+                <h3>Anti-Burnout System</h3>
+                <p>Renewable ideas, not one-off inspiration</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <h3>Platform-Specific Ideas</h3>
+                <p>Instagram, TikTok, Pinterest — all covered</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="fade-in">
+        <h2 class="section-title">What Creators Are Saying</h2>
+        <div class="divider"></div>
+        
+        <div class="testimonial">
+            <p class="testimonial-text">
+                "I used to spend 2+ hours a day searching for content ideas. StyleKit gave me 
+                30 days of content in my exact aesthetic. I finally feel like I have a cohesive brand."
+            </p>
+            <p class="testimonial-author">— @fashionbyemily, 47K followers</p>
+        </div>
+        
+        <div class="testimonial">
+            <p class="testimonial-text">
+                "Creative burnout was killing my consistency. StyleKit feels like having a 
+                brand strategist in my pocket."
+            </p>
+            <p class="testimonial-author">— @beautyminimalist, 23K followers</p>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="fade-in" style="background: var(--light-gray); margin: 0; max-width: 100%;">
+        <h2 class="section-title">Beta Founder Pricing</h2>
+        <div class="divider"></div>
+        
+        <div class="pricing-card">
+            <span class="badge">Limited to First 50 Creators</span>
+            <span class="price-regular">$197</span>
+            <div class="price-tag">$67</div>
+            
+            <ul class="pricing-features">
+                <li>✓ Complete StyleKit Strategy</li>
+                <li>✓ Pinterest Board + Instagram Analysis</li>
+                <li>✓ 30-Day Content Calendar</li>
+                <li>✓ Caption & Script Templates</li>
+                <li>✓ Brand Positioning Guide</li>
+                <li>✓ Visual Direction System</li>
+                <li>✓ Lifetime 50% off future subscription</li>
+                <li>✓ Priority support</li>
+                <li>✓ Free aesthetic refreshes for 6 months</li>
+            </ul>
+            
+            <a href="#" class="cta-button" style="margin-top: 2rem;">Secure Your Spot — $67</a>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat">
+                <div class="stat-number">30</div>
+                <div class="stat-label">Days of Content</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">2hrs</div>
+                <div class="stat-label">Saved Daily</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">On-Brand</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">$67</div>
+                <div class="stat-label">Beta Price</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="fade-in" style="text-align: center; padding: 8rem 2rem;">
+        <h2 class="section-title">Stop the Daily "Content Ideas" Search</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">
+            Join 50 fashion, beauty, and lifestyle creators building cohesive brands 
+            without creative burnout.
+        </p>
+        <a href="#pricing" class="cta-button">Apply for Early Access</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 StyleKit. Your AI Creative Director.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">
+            <a href="#">Privacy Policy</a> · 
+            <a href="#">Terms of Service</a> · 
+            <a href="mailto:hello@thestylekit.ai">hello@thestylekit.ai</a>
+        </p>
+    </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        // Fade in on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
