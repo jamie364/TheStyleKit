@@ -7,14 +7,13 @@
     <meta name="p:domain_verify" content="d6c059a57989cf3799daa7ba9a03e235"/>
     <title>StyleKit — Your AI Creative Director</title>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TYX66HDF53"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TYX66HDF53');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYX66HDF53"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TYX66HDF53');
+    </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,6 +51,64 @@
             letter-spacing: -0.02em;
         }
         
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 4rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(45, 45, 45, 0.1);
+        }
+        
+        .nav-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            color: var(--charcoal);
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-dark);
+        }
+        
+        .nav-cta {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--charcoal);
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-cta:hover {
+            background: var(--accent-dark);
+        }
+        
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -59,7 +116,7 @@
             grid-template-columns: 1fr 1fr;
             align-items: center;
             gap: 4rem;
-            padding: 2rem 4rem;
+            padding: 8rem 4rem 2rem;
             position: relative;
             overflow: hidden;
         }
@@ -384,9 +441,26 @@
         
         /* Responsive */
         @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+            
+            .nav-links {
+                gap: 1.5rem;
+            }
+            
+            .nav-link {
+                font-size: 0.85rem;
+            }
+            
+            .nav-cta {
+                padding: 0.6rem 1rem;
+                font-size: 0.75rem;
+            }
+            
             .hero {
                 grid-template-columns: 1fr;
-                padding: 2rem 1.5rem;
+                padding: 7rem 1.5rem 2rem;
                 min-height: auto;
                 gap: 2rem;
             }
@@ -445,90 +519,52 @@
             margin-bottom: 1rem;
         }
     </style>
-   
 
-<!-- Schema Markup for SEO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "StyleKit",
-  "applicationCategory": "BusinessApplication",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock",
-    "description": "Free Beta Access"
-  },
-  "description": "AI-powered content strategy tool for fashion, beauty & lifestyle creators. StyleKit understands your visual world like a creative partner and generates daily content ideas that feel authentically you.",
-  "operatingSystem": "Web Browser",
-  "url": "https://thestylekit.ai",
-  "author": {
-    "@type": "Organization",
-    "name": "StyleKit"
-  },
-  "audience": {
-    "@type": "PeopleAudience",
-    "audienceType": "Fashion, Beauty & Lifestyle Creators"
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "StyleKit",
-  "url": "https://thestylekit.ai",
-  "logo": "https://thestylekit.ai/logo.png",
-  "description": "AI Creative Director for fashion, beauty & lifestyle creators. Stop searching for content ideas every day.",
-  "slogan": "Your AI Creative Director",
-  "foundingDate": "2025",
-  "sameAs": [
-    "https://www.instagram.com/thestylekit.ai",
-    "https://www.pinterest.com/thestylekit"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "Customer Service",
-    "url": "https://thestylekit.ai/#waitlist"
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "StyleKit",
-  "url": "https://thestylekit.ai",
-  "description": "AI-powered content strategy for fashion, beauty & lifestyle creators",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://thestylekit.ai/?s={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "StyleKit",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "description": "Free Beta Access"
+      },
+      "description": "AI-powered content strategy tool for fashion, beauty & lifestyle creators.",
+      "operatingSystem": "Web Browser",
+      "url": "https://thestylekit.ai"
+    }
+    </script>
 </head>
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
-        <span class="badge">For Fashion, Beauty & Lifestyle Creators</span>
-      <h1>Tired of generic content ideas?<br>Meet the AI that gets your style.</h1>
-        <div class="divider"></div>
-        <p class="subheadline">
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="/" class="nav-logo">StyleKit</a>
+        <div class="nav-links">
+            <a href="/blog/content-idea-spiral.html" class="nav-link">Blog</a>
+            <a href="#pricing" class="nav-link">Pricing</a>
+            <a href="https://tally.so/r/LZZz8j" class="nav-cta">Get Access</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">For Fashion, Beauty & Lifestyle Creators</span>
+            <h1>Tired of generic content ideas?<br>Meet the AI that gets your style.</h1>
+            <div class="divider" style="margin-left: 0;"></div>
             <p class="subheadline">
-    StyleKit understands your visual world like a creative partner and generates daily content ideas that feel authentically you — not someone else's aesthetic.
-</p>
-        </p>
-        <a href="#waitlist" class="cta-button">Get Free Beta Access</a>
-    </div>
-    <div class="hero-image">
-        <img src="hero-image.jpg" alt="StyleKit - Content strategy for fashion and lifestyle creators" loading="eager">
-    </div>
-</section>
+                StyleKit understands your visual world like a creative partner and generates daily content ideas that feel authentically you — not someone else's aesthetic.
+            </p>
+            <a href="#waitlist" class="cta-button">Get Free Beta Access</a>
+        </div>
+        <div class="hero-image">
+            <img src="hero-image.jpg" alt="StyleKit - Content strategy for fashion and lifestyle creators" loading="eager">
+        </div>
     </section>
 
     <!-- Pain Points -->
@@ -690,8 +726,7 @@
             <span class="badge" style="margin-bottom: 2rem;">Limited to First 50 Creators</span>
             <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">Reserve Your Spot</h3>
             
-            <!-- REPLACE THIS LINK WITH YOUR TALLY FORM LINK -->
-           <a href="https://tally.so/r/LZZz8j"
+            <a href="https://tally.so/r/LZZz8j"
                class="cta-button" 
                target="_blank"
                style="display: inline-block; margin-top: 1rem;">
@@ -767,8 +802,9 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 StyleKit. Your AI Creative Director.</p>
+        <p>&copy; 2026 StyleKit. Your AI Creative Director.</p>
         <p style="margin-top: 1rem; font-size: 0.9rem;">
+            <a href="/blog/content-idea-spiral.html">Blog</a> · 
             <a href="#">Privacy Policy</a> · 
             <a href="#">Terms of Service</a> · 
             <a href="mailto:hello@thestylekit.ai">hello@thestylekit.ai</a>
@@ -777,7 +813,6 @@
 
     <!-- Scroll Animation Script -->
     <script>
-        // Fade in on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -795,7 +830,6 @@
             observer.observe(el);
         });
 
-        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
